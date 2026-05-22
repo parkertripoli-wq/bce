@@ -2,12 +2,14 @@
 <html>
 <head>
   <style>
-    body { width: 360px; font-family: system-ui; background: #0f172a; color: white; margin: 0; padding: 20px; }
-    h1 { text-align: center; margin: 0 0 20px; }
-    .coins { font-size: 2.2rem; text-align: center; margin: 15px 0; }
+    body { width: 380px; font-family: system-ui; background: #0f172a; color: white; margin: 0; padding: 20px; }
+    h1 { text-align: center; margin: 0 0 15px; }
+    .coins { font-size: 2.3rem; text-align: center; margin: 15px 0; }
     button { width: 100%; padding: 14px; margin: 8px 0; border: none; border-radius: 12px; font-size: 1.1rem; cursor: pointer; }
     .btn-primary { background: #22c55e; color: black; }
     .btn-secondary { background: #334155; }
+    .update { background: #eab308; color: black; font-weight: bold; }
+    #status { font-size: 0.95rem; text-align: center; margin-top: 10px; opacity: 0.8; }
   </style>
 </head>
 <body>
@@ -17,6 +19,10 @@
   <button class="btn-primary" id="shop-btn">🛒 Shop</button>
   <button class="btn-secondary" id="settings-btn">⚙️ Settings</button>
   <button class="btn-secondary" id="status">Monitoring: ON</button>
+
+  <button class="update" id="update-btn" style="display:none;">⬆️ Update Available!</button>
+
+  <div id="status"></div>
 
   <script src="popup.js"></script>
 </body>
