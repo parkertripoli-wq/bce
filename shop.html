@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { width: 400px; padding: 20px; background: #0f172a; color: white; font-family: system-ui; }
+    .item { background: #1e2937; padding: 15px; margin: 12px 0; border-radius: 12px; display: flex; justify-content: space-between; align-items: center; }
+  </style>
+</head>
+<body>
+  <h1>🛒 Shop</h1>
+  <div class="item">
+    <span>🌈 Rainbow Cursor</span>
+    <button onclick="buyItem('rainbowCursor', 25)">25 coins</button>
+  </div>
+  <div class="item">
+    <span>📜 Fancy Scrollbar</span>
+    <button onclick="buyItem('fancyScrollbar', 40)">40 coins</button>
+  </div>
+  <div class="item">
+    <span>👑 Crown Avatar</span>
+    <button onclick="buyItem('crown', 60)">60 coins</button>
+  </div>
+
+  <script>
+    function buyItem(item, price) {
+      chrome.storage.sync.get(['coins'], (data) => {
+        if ((data.coins || 0) >= price) {
+          chrome.storage.sync.set({ coins: data.coins - price });
+          alert(`✅ Purchased ${item}!`);
+          // TODO: Save purchased items and apply them
+        } else {
+          alert("Not enough coins!");
+        }
+      });
+    }
+  </script>
+</body>
+</html>

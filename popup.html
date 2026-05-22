@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { width: 360px; font-family: system-ui; background: #0f172a; color: white; margin: 0; padding: 20px; }
+    h1 { text-align: center; margin: 0 0 20px; }
+    .coins { font-size: 2.2rem; text-align: center; margin: 15px 0; }
+    button { width: 100%; padding: 14px; margin: 8px 0; border: none; border-radius: 12px; font-size: 1.1rem; cursor: pointer; }
+    .btn-primary { background: #22c55e; color: black; }
+    .btn-secondary { background: #334155; }
+  </style>
+</head>
+<body>
+  <h1>🌬️ Breathe Calm</h1>
+  <div class="coins">💰 <span id="coin-count">0</span> coins</div>
+
+  <button class="btn-primary" id="shop-btn">🛒 Shop</button>
+  <button class="btn-secondary" id="settings-btn">⚙️ Settings</button>
+  <button class="btn-secondary" id="status">Monitoring: ON</button>
+
+  <script src="popup.js"></script>
+</body>
+</html>

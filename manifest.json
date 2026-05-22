@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Breathe Calm",
+  "version": "2.0",
+  "description": "Stay calm. Earn coins. Customize your browser.",
+  "icons": { "128": "icon.png" },
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Breathe Calm"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
